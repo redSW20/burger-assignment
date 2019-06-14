@@ -1,0 +1,8 @@
+<div>
+	<span class="font-weight-bold mt-2">{{burger_name}}</span><br>
+
+	<button class="change-eaten btn btn-secondary btn-sm mb-4 mt-1" data-id="{{id}}" data-neweaten="{{devoured}}">
+		{{#if devoured}}Mind if I have a bite?{{else}}Say 'what' again!{{/if}}
+	</button>
+	<button class="delete-burger btn btn-danger btn-sm mb-4 mt-1" data-id="{{this.id}}">&times;</button>
+</div>
