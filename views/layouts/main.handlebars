@@ -1,55 +1,42 @@
-<div class="container d-block ">
-    <div class="row mb-4">
-        <div class="col-md text-center">
-            <img src="assets/img/tastyburger.jpg" class="img-fluid mt-2">
-        </div>
-    </div>
-    <div class="row text-center mt-1">
-        <div class="col-md-6">
-            <div class="h3">In my hand</div>
+<!DOCTYPE html>
+<html lang="en">
 
-            <p>
-                {{#each burgers}}
-                {{#unless devoured}}
-                {{> burgers/burger-block devoured=true}}
-                {{/unless}}
-                {{/each}}
-            </p>
-        </div>
-        <div class="col-md-6">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Fiction</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/ico//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/ico//favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/ico//site.webmanifest">
 
-            <div class="h3">In my belly!</div>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-            <p>
-                {{#each burgers}}
-                {{#if devoured}}
-                {{> burgers/burger-block devoured=false}}
-                {{/if}}
-                {{/each}}
-            </p>
-        </div>
-    </div>
+    <!-- My stylesheet -->
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
 
-    <div class="row">
-        <div class="col-md text-center">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
-            <h3>Add a Burger</h3>
-            <form class="create-form">
+    <!-- My Custom JS -->
+    <script src="/assets/js/burgers.js"></script>
+</head>
 
-                <div class="form-group">
-                    <input type="text" class="form-control text-center" id="bu" name="burger_name">
-                </div>
-
-                <div class="form-group form-check-inline">
-                    <div><input type="radio" name="devoured" value="0" checked> In my hand &nbsp &nbsp</div>
-                    <div><input type="radio" name="devoured" value="1"> In my belly!</div>
-
-                </div>
-
-                <button type="submit" class="btn btn-secondary btn-sm">DO EEEETTT!!!</button>
-            </form>
-        </div>
+<body>
+    {{{ body }}}
 
 
-    </div>
-</div>
+    <!-- Javascript for bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
