@@ -1,0 +1,55 @@
+<div class="container d-block ">
+    <div class="row mb-4">
+        <div class="col-md text-center">
+            <img src="assets/img/tastyburger.jpg" class="img-fluid mt-2">
+        </div>
+    </div>
+    <div class="row text-center mt-1">
+        <div class="col-md-6">
+            <div class="h3">In my hand</div>
+
+            <p>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </p>
+        </div>
+        <div class="col-md-6">
+
+            <div class="h3">In my belly!</div>
+
+            <p>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md text-center">
+
+            <h3>Add a Burger</h3>
+            <form class="create-form">
+
+                <div class="form-group">
+                    <input type="text" class="form-control text-center" id="bu" name="burger_name">
+                </div>
+
+                <div class="form-group form-check-inline">
+                    <div><input type="radio" name="devoured" value="0" checked> In my hand &nbsp &nbsp</div>
+                    <div><input type="radio" name="devoured" value="1"> In my belly!</div>
+
+                </div>
+
+                <button type="submit" class="btn btn-secondary btn-sm">DO EEEETTT!!!</button>
+            </form>
+        </div>
+
+
+    </div>
+</div>
